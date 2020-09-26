@@ -10,9 +10,9 @@
         android:id="@+id/ivPoster"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="35dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="25dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -23,6 +23,7 @@
         android:textSize="25dp"
         android:textFontWeight="4"
         android:layout_toRightOf="@+id/ivPoster"
+        android:textColor="@color/colorPrimaryDark"
         android:text="TextView" />
 
     <TextView

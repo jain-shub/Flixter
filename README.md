@@ -1,29 +1,27 @@
-# Project 1 - *Flixter*
-
-
-**Flixter** is an android app that allows building a Movies list which are currently on show with only viewing functionality.
+# Flix
+Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 Submitted by: **Shubham Jain**
 
 Time spent: **5** hours spent in total
 
-## User Stories
+## Flix Part 1
 
-The following **required** functionality is completed:
+### User Stories
+`TODO://` In the **User Stories section below**, add an `x` in the `-[ ]` like this `- [x]` for any user story you complete. (🚫 Remove this paragraph after after checking off completed user stories)
 
-* [x] User can **view a list of Movies**  as Recycler View
-* [x] User can **scroll the panel** to view many movies
+#### REQUIRED (10pts)
+- [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
 
-The following **optional** features are implemented:
+#### BONUS
+- [x] (2pts) Views should be responsive for both landscape/portrait mode.
+   - [x] (1pt) In portrait mode, the poster image, title, and movie overview is shown.
+   - [x] (1pt) In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
 
-* [x] User can **rotate the screen to view landscape** view of the app
+- [x] (2pts) Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
+- [x] (2pts) Improved the user interface by experimenting with styling and coloring.
+- [x] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you can get done to improve the app functionality!
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
+### App Walkthough GIF
 
 <img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
