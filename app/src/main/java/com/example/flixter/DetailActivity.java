@@ -1,6 +1,7 @@
 package com.example.flixter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.example.flixter.databinding.ActivityDetailBinding;
+import com.example.flixter.databinding.ActivityMainBinding;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -23,6 +26,8 @@ import okhttp3.Headers;
 
 public class DetailActivity extends YouTubeBaseActivity {
 
+    private ActivityDetailBinding binding;
+
     private static final String YOUTUBE_API_KEY = "AIzaSyCX7Wn6_oIc-Q4XbmW5n5tzc2XBbsPbOSE";
     private static final String VIDEO_KEY = "https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     public static final String logTag = "DetailActivity";
@@ -35,11 +40,16 @@ public class DetailActivity extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-        tvTitle = findViewById(R.id.tvTitle);
-        tvOverview = findViewById(R.id.tvOverview);
-        ratingBar = findViewById(R.id.ratingBar);
-        youtubePlayerView = findViewById(R.id.player);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
+//        setContentView(R.layout.activity_detail);
+//        tvTitle = findViewById(R.id.tvTitle);
+//        tvOverview = findViewById(R.id.tvOverview);
+//        ratingBar = findViewById(R.id.ratingBar);
+//        youtubePlayerView = findViewById(R.id.player);
+        tvTitle = binding.tvTitle;
+        tvOverview = binding.tvOverview;
+        ratingBar = binding.ratingBar;
+        youtubePlayerView = binding.player;
 
         final Movies movie = (Movies) Parcels.unwrap(getIntent().getParcelableExtra("movie"));
         tvTitle.setText(movie.getTitle());

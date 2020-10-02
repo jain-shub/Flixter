@@ -19,6 +19,7 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixter.DetailActivity;
 import com.example.flixter.MainActivity;
 import com.example.flixter.R;
@@ -100,6 +101,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
             Glide.with(context).load(imageUrl)
                     .placeholder(R.drawable.ic_launcher_background)
+                    .transform(new RoundedCorners(20))
                     .error(R.drawable.ic_launcher_foreground)
                     .into(ivPoster);
 
