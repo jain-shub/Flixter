@@ -13,6 +13,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
+        android:transitionName="movieTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -29,6 +30,7 @@
 
     <TextView
         android:id="@+id/tvOverview"
+        android:transitionName="movieOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
