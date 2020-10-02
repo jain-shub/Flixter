@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,8 +11,8 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="25dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -20,11 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:textSize="25dp"
-        android:textFontWeight="4"
         android:layout_toRightOf="@+id/ivPoster"
+        android:text="TextView"
         android:textColor="@color/colorPrimaryDark"
-        android:text="TextView" />
+        android:textFontWeight="4"
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/tvOverview"

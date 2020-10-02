@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                     moviesList.addAll(Movies.fromMoviesArray(resultArr));
                     adapter.notifyDataSetChanged();
                     Log.d(logTag, "Movies: " + moviesList.size());
+
+
                 } catch (JSONException e) {
                     Log.d(logTag, e.getMessage());
                 }
